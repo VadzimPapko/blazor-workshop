@@ -67,7 +67,7 @@ namespace BlazingPizza
         {
             // Random but deterministic based on order ID
             var rng = new Random(order.OrderId);
-            var distance = 0.01 + rng.NextDouble() * 0.02;
+            distance = 0.01 + rng.NextDouble() * 0.02;
             var angle = rng.NextDouble() * Math.PI * 2;
             var offset = (distance * Math.Cos(angle), distance * Math.Sin(angle));
             return new LatLong(order.DeliveryLocation.Latitude + offset.Item1, order.DeliveryLocation.Longitude + offset.Item2);

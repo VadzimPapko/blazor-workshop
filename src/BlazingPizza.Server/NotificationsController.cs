@@ -23,7 +23,7 @@ namespace BlazingPizza.Server
         {
             // We're storing at most one subscription per user, so delete old ones.
             // Alternatively, you could let the user register multiple subscriptions from different browsers/devices.
-            var userId = GetUserId();
+            userId = GetUserId();
             var oldSubscriptions = _db.NotificationSubscriptions.Where(e => e.UserId == userId);
             _db.NotificationSubscriptions.RemoveRange(oldSubscriptions);
 

@@ -118,7 +118,7 @@
                 },
             };
 
-            var specials = new PizzaSpecial[]
+            specials = new PizzaSpecial[]
             {
                 new PizzaSpecial()
                 {
